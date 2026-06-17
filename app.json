@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "LEDGER",
+    "slug": "ledger-finance-os",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "ledger",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.ledger.financeOS"
+    },
+    "android": {
+      "package": "com.ledger.financeOS",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#030712"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "./plugin",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#030712",
+          "image": "./assets/icon.png",
+          "imageWidth": 200
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow LEDGER to access your photos to set profile and wallet images."
+        }
+      ],
+      "expo-font",
+      "expo-sqlite"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "36327fad-3ba3-4a22-8ca4-6a886edbd0e3"
+      }
+    },
+    "owner": "samian04"
+  }
+}
